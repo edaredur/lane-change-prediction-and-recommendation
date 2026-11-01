@@ -1,0 +1,39 @@
+============================================================
+TRAINING REPORT — BiLSTM Lane Change Prediction
+============================================================
+
+--- Konfigurasi ---
+Arsitektur    : BiLSTM
+Input size    : 6
+Hidden size   : 32
+Num layers    : 2
+Dropout       : 0.4
+Epochs ran    : 21/50
+Batch size    : 64
+Learning rate : 0.0003
+Weight decay  : 0.0001
+Total params  : 37,507
+
+--- Hasil Training ---
+Best epoch    : 6
+Best val loss : 0.7185
+Best val F1   : 0.7494
+
+--- Hasil Test Set ---
+Accuracy      : 0.7210 (72.10%)
+Macro F1      : 0.7218
+Macro Prec    : 0.7205
+Macro Recall  : 0.7244
+
+--- Per Kelas (Test) ---
+Kelas          F1  Precision   Recall
+--------------------------------------
+KL         0.6321     0.6594   0.6069
+LLC        0.7679     0.7467   0.7904
+RLC        0.7653     0.7552   0.7757
+
+--- File Output ---
+Best model    : models/bilstm/bilstm_best.pt
+Final model   : models/bilstm/bilstm_final.pt
+History       : models/bilstm/training_history.pkl
+============================================================
